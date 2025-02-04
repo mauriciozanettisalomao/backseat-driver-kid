@@ -105,29 +105,6 @@ func (i *Interaction) Run(ctx context.Context) error {
 		return errOutputWriter
 	}
 
-	// promptContext := `Analyze the following consent text and categorize it into one of these categories:
-	// 	1. Linux Foundation News
-	// 	2. Project Specific News
-	// 	3. Education (training and certification)
-	// 	4. Unknown`
-
-	// instructions := `Respond only with the category, e.g.: 1. Linux Foundation News.`
-
-	// interactionData := &domain.Interaction{
-	// 	Preamble: domain.Preamble{
-	// 		Context:      promptContext,
-	// 		Instructions: instructions,
-	// 	},
-	// 	Input: []string{i.text},
-	// }
-	// err := i.interaction.Interact(ctx, interactionData)
-	// if err != nil {
-	// 	return err
-	// }
-
-	// response := strings.TrimSpace(interactionData.Output)
-	// slog.InfoContext(ctx, "Response received", "response", response)
-
 	return nil
 
 }
