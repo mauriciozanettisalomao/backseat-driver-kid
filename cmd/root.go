@@ -31,6 +31,7 @@ func Execute() {
 }
 
 func init() {
+
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	rootCmd.PersistentFlags().String("log-level", "debug", "Flag to indicate debug mode.")
@@ -39,7 +40,7 @@ func init() {
 		log.Fatalf("error binding flag: %s | error %v", "debug", err)
 	}
 
-	rootCmd.PersistentFlags().String("log-format", "text", "Log format")
+	rootCmd.PersistentFlags().String("log-format", "json", "Log format")
 	err = viper.BindPFlag("logFormat", rootCmd.PersistentFlags().Lookup("log-format"))
 	if err != nil {
 		log.Fatalf("error binding flag: %s | error %v", "logFormat", err)

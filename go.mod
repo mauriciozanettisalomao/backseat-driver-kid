@@ -1,6 +1,6 @@
 module github.com/mauriciozanettisalomao/backseat-driver-kid
 
-go 1.23.0
+go 1.22.8
 
 require (
 	github.com/spf13/cobra v1.8.1

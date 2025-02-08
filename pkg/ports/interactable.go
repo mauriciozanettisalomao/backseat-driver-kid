@@ -8,5 +8,6 @@ import (
 
 // Interactable defines the behavior of interactable actions
 type Interactable interface {
+	ExpandKnowledge(context.Context, *domain.Interaction) error
 	Interact(context.Context, *domain.Interaction) error
 }

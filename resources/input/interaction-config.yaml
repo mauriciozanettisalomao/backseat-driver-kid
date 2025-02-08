@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: interaction-config
+data:
+  interaction:
+    preamble:
+      context: | 
+        I want to know specific details about my academic performance in school based on:
+        * Additional Knowledge provided and
+        * the QUERY in the prompt
+      instructions: | 
+        * Provide straightforward answers to the user's questions based on the additional information provided.
+        * If there's no information available, respond with 'No information available'.
+        * Don't make up information
+        * Don't include any irrelevant words, e.g: 'Based on the information provided'
+        * Don't include any additional questions in the answers.
+        * Don't include the examples in the answers.
+        * Don't include the prompt in the answers.
+      examples: |
+        * Example 1:
+          Prompt: In Kindergarten, which subject did I excel the most in?
+          Answer: In Kindergarten, the user excelled the most in _______.
+        * Example 2:
+          Prompt: What is the name of the school I attended in Elementary?
+          Answer: No information available
+    extendedKownledgeDir:
+      - resources/input/knowledge
+    prompts:
+      - input: In Kindergarten, which subject did I excel the most in?
+      - input: How old was I when I started school?
+    promptFile: resources/input/prompts/questions.txt
