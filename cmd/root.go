@@ -1,5 +1,5 @@
-// Copyright The Linux Foundation and each contributor to LFX.
-// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Maurício Zanetti Salomão
+// Licensed under the MIT License. See the LICENSE file for details.
 
 package cmd
 
